@@ -1,0 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using TMPro;
+public class DragGameManager : MonoBehaviour
+{
+    public static Action<Item,string> onItemHandle;
+    public Transform itemsSpawnTranfrom;
+    //public Item[] itemsPrefabs;
+    [SerializeField] private Game1 gameAsset;
+    [SerializeField] private TMP_Text location;
+    [SerializeField] private TMP_Text answersText;
+    [SerializeField] private Base basse;
+    private int rightAnswers;
+    private int answers;
+    private int totalQuestions;
+    private List<Item> items;
+    private void OnEnable()
+    {
+        onItemHandle += HandleItem;
+        InitItems();
+    }
+    private void OnDisable()
+    {
+        onItemHandle -= HandleItem;
+        InitItems();
+    }
+    public void SetGameAsset(Game1 game)
+    {
+        gameAsset=game;
+    }
+    private void InitItems()
+    {
+        items = new List<Item>();
+        foreach (Item item in gameAsset.Items)
+        {
+            Item newItem= Instantiate(item);
+            newItem.transform.position=itemsSpawnTranfrom.position;
+            newItem.transform.parent = itemsSpawnTranfrom;
+            items.Add(newItem);
+            newItem.transform.localScale = Vector3.one*2;
+            newItem.gameObject.SetActive(false);
+        }
+        items[items.Count-1].gameObject.SetActive(true);
+        location.text = gameAsset.LocationName;
+        basse.type = gameAsset.LocationName;
+        totalQuestions=items.Count;
+        answersText.text = answers.ToString() + "/" + totalQuestions;
+    }
+    private void HandleItem(Item item,string baseType)
+    {
+        if (item.type==baseType)
+        {
+            rightAnswers+=1;
+            Debug.Log("Right Answers" + rightAnswers);
+        }
+        else if (item.type==gameAsset.LocationName && baseType!=item.type)
+        {
+            rightAnswers-=1;
+        }
+        else
+        {
+            rightAnswers+=1;
+            Debug.Log("Right Answers" + rightAnswers);
+        }
+        items.Remove(item);
+        item.gameObject.SetActive(false);
+        if (items.Count == 0 )
+        {
+            EndGame();
+            return;
+        }
+        items[items.Count - 1].gameObject.SetActive(true);
+        answers += 1;
+        answersText.text = answers.ToString()+"/"+totalQuestions;
+    }
+    private void EndGame()
+    {
+        Debug.Log("End Game");
+    }
+}
