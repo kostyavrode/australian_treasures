@@ -8,9 +8,11 @@ public class DragGameManager : MonoBehaviour
     public static Action<Item,string> onItemHandle;
     public Transform itemsSpawnTranfrom;
     //public Item[] itemsPrefabs;
+    [SerializeField] private GameObject closeButton;
     [SerializeField] private Game1 gameAsset;
     [SerializeField] private TMP_Text location;
     [SerializeField] private TMP_Text answersText;
+    [SerializeField] private TMP_Text results;
     [SerializeField] private Base basse;
     private int rightAnswers;
     private int answers;
@@ -23,6 +25,8 @@ public class DragGameManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        rightAnswers = 0; answers=0;
+        closeButton.gameObject.SetActive(false);
         onItemHandle -= HandleItem;
         InitItems();
     }
@@ -57,11 +61,16 @@ public class DragGameManager : MonoBehaviour
         }
         else if (item.type==gameAsset.LocationName && baseType!=item.type)
         {
-            rightAnswers-=1;
+            Debug.Log("Wrong Answers" + rightAnswers);
+        }
+        else if (baseType!=item.type && basse.type==item.type) 
+        {
+            
+            Debug.Log("Wrong Answers" + rightAnswers);
         }
         else
         {
-            rightAnswers+=1;
+            rightAnswers += 1;
             Debug.Log("Right Answers" + rightAnswers);
         }
         items.Remove(item);
@@ -78,5 +87,8 @@ public class DragGameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("End Game");
+        results.text=rightAnswers.ToString()+"/"+totalQuestions;
+        closeButton.gameObject.SetActive(true);    
+        answersText.text = totalQuestions + "/" + totalQuestions;
     }
 }
