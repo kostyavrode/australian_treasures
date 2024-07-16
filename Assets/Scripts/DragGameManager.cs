@@ -47,7 +47,7 @@ public class DragGameManager : MonoBehaviour
             newItem.gameObject.SetActive(false);
         }
         items[items.Count-1].gameObject.SetActive(true);
-        location.text = gameAsset.LocationName;
+        location.text = gameAsset.LocationName.ToUpper();
         basse.type = gameAsset.LocationName;
         totalQuestions=items.Count;
         answersText.text = answers.ToString() + "/" + totalQuestions;
@@ -59,19 +59,16 @@ public class DragGameManager : MonoBehaviour
             rightAnswers+=1;
             Debug.Log("Right Answers" + rightAnswers);
         }
-        else if (item.type==gameAsset.LocationName && baseType!=item.type)
-        {
-            Debug.Log("Wrong Answers" + rightAnswers);
-        }
-        else if (baseType!=item.type && basse.type==item.type) 
-        {
-            
-            Debug.Log("Wrong Answers" + rightAnswers);
-        }
-        else
+        else if (item.type!=gameAsset.LocationName && baseType=="")
         {
             rightAnswers += 1;
             Debug.Log("Right Answers" + rightAnswers);
+        }
+        //else if (item.type != gameAsset.LocationName && baseType != item.type)
+        else
+        {
+            //rightAnswers += 1;
+            Debug.Log("Wrong Answers" + rightAnswers);
         }
         items.Remove(item);
         item.gameObject.SetActive(false);
