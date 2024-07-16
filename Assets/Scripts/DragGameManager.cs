@@ -87,5 +87,11 @@ public class DragGameManager : MonoBehaviour
         results.text=rightAnswers.ToString()+"/"+totalQuestions;
         closeButton.gameObject.SetActive(true);    
         answersText.text = totalQuestions + "/" + totalQuestions;
+        if (rightAnswers>3)
+        {
+            PlayerPrefs.SetInt("Money",PlayerPrefs.GetInt("Money") + rightAnswers * 10);
+            PlayerPrefs.SetInt("Russia", rightAnswers * 10);
+            PlayerPrefs.Save();
+        }
     }
 }
