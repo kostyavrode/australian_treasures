@@ -90,8 +90,9 @@ public class DragGameManager : MonoBehaviour
         if (rightAnswers>3)
         {
             PlayerPrefs.SetInt("Money",PlayerPrefs.GetInt("Money") + rightAnswers * 10);
-            PlayerPrefs.SetInt("Russia", rightAnswers * 10);
+            PlayerPrefs.SetInt(gameAsset.LocationName, rightAnswers * 10);
             PlayerPrefs.Save();
+            Debug.Log(gameAsset.LocationName);
         }
     }
 }
