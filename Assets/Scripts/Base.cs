@@ -10,7 +10,14 @@ public class Base : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Item>(out Item comp))
         {
-            ArtistGame.onItemHandle(comp,type);
+            try
+            {
+                ArtistGame.onItemHandle(comp, type);
+            }
+            catch
+            {
+                DragGameManager.onItemHandle(comp, type);
+            }
         }
     }
     public void SetText(string text)
