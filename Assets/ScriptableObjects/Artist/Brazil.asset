@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a281a89ab94b6b49b4ba9fc65c01ef4, type: 3}
-  m_Name: Russia
+  m_Script: {fileID: 11500000, guid: e232618a8b94f2b49be5c3f45e4309fc, type: 3}
+  m_Name: Brazil
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 7391978603795235615, guid: 787ad9285c7cb9949942d7bd83fa4052, type: 3}
-  - {fileID: 7391978603795235615, guid: 23e06fa92bb7e46469be4ea05a15f525, type: 3}
   - {fileID: 7391978603795235615, guid: 63e4157e77e3b884f83663c6c038bb8b, type: 3}
+  - {fileID: 7391978603795235615, guid: 787ad9285c7cb9949942d7bd83fa4052, type: 3}
   - {fileID: 7391978603795235615, guid: ef3b2670bd0deec48a77c7fa5f3047d0, type: 3}
-  - {fileID: 7391978603795235615, guid: 23e06fa92bb7e46469be4ea05a15f525, type: 3}
-  locationName: Russia
+  - {fileID: 7391978603795235615, guid: 8db40a4392f56564b9aeed985c5362f1, type: 3}
+  locationName: Brazil
+  locationName2: USA

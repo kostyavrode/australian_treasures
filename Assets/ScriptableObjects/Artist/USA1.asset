@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e232618a8b94f2b49be5c3f45e4309fc, type: 3}
+  m_Name: USA1
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 7391978603795235615, guid: b9f18b0e7a15a8647ba8637ff5c7641f, type: 3}
+  - {fileID: 7391978603795235615, guid: 787ad9285c7cb9949942d7bd83fa4052, type: 3}
+  - {fileID: 7391978603795235615, guid: 63e4157e77e3b884f83663c6c038bb8b, type: 3}
+  - {fileID: 7391978603795235615, guid: b54442cc68303d74b96e96832d523605, type: 3}
+  - {fileID: 7391978603795235615, guid: ef3b2670bd0deec48a77c7fa5f3047d0, type: 3}
+  locationName: Canada
+  locationName2: USA

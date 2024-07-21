@@ -93,10 +93,11 @@ public class ArtistGame : MonoBehaviour
         answersText.text = totalQuestions + "/" + totalQuestions;
         if (rightAnswers>3)
         {
-            PlayerPrefs.SetInt("Money",PlayerPrefs.GetInt("Money") + rightAnswers * 10);
-            PlayerPrefs.SetInt(gameAsset.LocationName, rightAnswers * 10);
+            //PlayerPrefs.SetInt("Money",PlayerPrefs.GetInt("Money") + rightAnswers * 10);
+            //PlayerPrefs.SetInt(gameAsset.LocationName, rightAnswers * 10);
+            PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
             PlayerPrefs.Save();
-            Debug.Log(gameAsset.LocationName);
+            Debug.Log(PlayerPrefs.GetInt("level") + 1);
         }
     }
 }
