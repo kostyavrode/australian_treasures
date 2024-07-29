@@ -22,18 +22,19 @@ public class ArtistGame : MonoBehaviour
     private void OnEnable()
     {
         onItemHandle += HandleItem;
-        InitItems();
+        //InitItems();
     }
     private void OnDisable()
     {
         rightAnswers = 0; answers=0;
         closeButton.gameObject.SetActive(false);
         onItemHandle -= HandleItem;
-        InitItems();
+        //InitItems();
     }
     public void SetGameAsset(Game2 game)
     {
         gameAsset=game;
+        InitItems();
     }
     private void InitItems()
     {

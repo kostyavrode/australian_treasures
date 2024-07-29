@@ -21,7 +21,7 @@ public class ArtistMenu : MonoBehaviour
         for (int i = 0; i < t; i++)
         {
             Debug.Log("T"+t);
-            if (i<=buttons.Length)
+            if (i<=buttons.Length-1)
             buttons[i].interactable = true;
         }
     }
