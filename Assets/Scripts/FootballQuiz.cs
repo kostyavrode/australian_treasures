@@ -20,6 +20,8 @@ public class FootballQuiz : MonoBehaviour
     public List<Button> answerButtons;
     public TMP_Text scoreText;
 
+    public TMP_Text endScore;
+
     private int score = 0;
     private int rounds = 0;
     private Club correctClub;
@@ -81,6 +83,7 @@ public class FootballQuiz : MonoBehaviour
     }
     void EndGame()
     {
+        endScore.text = scoreText.text;
         score = 0;
         rounds= 0;
         endGameMenu.SetActive(true);
