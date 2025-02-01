@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e232618a8b94f2b49be5c3f45e4309fc, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 7391978603795235615, guid: 6d051a1ea92a0f74dbac92dd6277c548, type: 3}
+  - {fileID: 7391978603795235615, guid: b35ceb5a39cad274bb0e3836d728883b, type: 3}
+  - {fileID: 7391978603795235615, guid: 6f2d8d5acdbfb844a9b45077b155c56a, type: 3}
+  - {fileID: 7391978603795235615, guid: e0468918800e4f54ea5673c2ed731bd2, type: 3}
+  locationName: Buffalo Bills
+  locationName2: Kansas City Chiefs

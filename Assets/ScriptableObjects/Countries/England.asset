@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a281a89ab94b6b49b4ba9fc65c01ef4, type: 3}
+  m_Name: England
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 7391978603795235615, guid: 3b75b9a8b7632b14081bfb9648343365, type: 3}
+  - {fileID: 7391978603795235615, guid: 7a07e9367ebeb0a45804502a9e2d8ab7, type: 3}
+  - {fileID: 7391978603795235615, guid: fa0a119e5db600d46ac7374dda855490, type: 3}
+  - {fileID: 7391978603795235615, guid: 9349df0acfcf43c4daad144f911a0680, type: 3}
+  - {fileID: 7391978603795235615, guid: e8a59a5a7398f65498df84ae6a06a716, type: 3}
+  locationName: England

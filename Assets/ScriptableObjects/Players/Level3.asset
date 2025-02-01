@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e232618a8b94f2b49be5c3f45e4309fc, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 7391978603795235615, guid: 6d051a1ea92a0f74dbac92dd6277c548, type: 3}
+  - {fileID: 7391978603795235615, guid: 549ffa69cf2db9948a077d1f0e9f3d11, type: 3}
+  - {fileID: 7391978603795235615, guid: 6f2d8d5acdbfb844a9b45077b155c56a, type: 3}
+  - {fileID: 7391978603795235615, guid: b2142728e2982794194882392a3b82f4, type: 3}
+  locationName: Lions
+  locationName2: Buffalo Bills

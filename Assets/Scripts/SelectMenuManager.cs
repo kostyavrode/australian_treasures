@@ -21,16 +21,8 @@ public class SelectMenuManager : MonoBehaviour
     }
     private void CheckGainedCountries()
     {
-        canadaGainedText.text = "+" + PlayerPrefs.GetInt("Canada").ToString();
-        russiaGainedText.text = "+" + PlayerPrefs.GetInt("Russia").ToString();
-        usaGainedText.text = "+" + PlayerPrefs.GetInt("USA").ToString();
-        franceGainedText.text = "+" + PlayerPrefs.GetInt("France").ToString();
-        netherlandsGainedText.text = "+" + PlayerPrefs.GetInt("Netherlands").ToString();
-        italyGainedText.text = "+" + PlayerPrefs.GetInt("Italy").ToString();
-        spainGainedText.text = "+" + PlayerPrefs.GetInt("Spain").ToString();
-        italyGainedText.text = "+" + PlayerPrefs.GetInt("Austria").ToString();
-        brazilGainedText.text = "+" + PlayerPrefs.GetInt("Brazil").ToString();
-        japanGainedText.text = "+" + PlayerPrefs.GetInt("Japan").ToString();
+        //canadaGainedText.text = "+" + PlayerPrefs.GetInt("Canada").ToString();
+        //usaGainedText.text = "+" + PlayerPrefs.GetInt("USA").ToString();
     }
 
     // Update is called once per frame
